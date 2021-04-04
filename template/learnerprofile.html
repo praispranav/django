@@ -1,0 +1,8 @@
+<form method="POST">
+    {% csrf_token %}
+    <input type="text" name="name" placeholder="Name" />
+    <input type="text" name="occupation" placeholder="Occupation" required/>
+    <input type="url" name="social" placeholder="Social" required/>
+    <input type="hidden" name="user" value="{{request.user.id}}" />
+    <input type="submit">
+</form>

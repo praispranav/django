@@ -1,0 +1,10 @@
+<h1>{{course.title}}</h1>
+<p>
+    {{course.des}}
+</p>
+
+<ul>
+    {% for c in lesson %}
+    <li><a href="{{c.id}}">{{c.title}}</a></li>
+    {% endfor %}
+</ul>

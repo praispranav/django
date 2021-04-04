@@ -1,0 +1,20 @@
+
+<form method="POST">
+   
+   {% csrf_token %}
+
+    <input type="hidden" name="user" value="{{request.user.id}}"
+
+
+<tr><th><label for="id_ins">Ins:</label></th><td>
+    
+    <select name="ins" required id="id_ins">
+        <option value="" selected>-------</option>
+        <option value="1">Learner</option>
+        <option value="2">Instructor</option>
+    </select> 
+
+    
+    <!-- <input type="number" name="ins" value="2" required id="id_ins"></td></tr> -->
+    <input type="submit" />
+</form>

@@ -1,0 +1,26 @@
+<ul>
+   
+   <li>{{question.text}}</li>
+   <ul>
+      {% for y in choice %}
+      <li>{{y.choice}}</li>
+      {% endfor %} 
+   </ul>
+   
+</ul>
+
+<form method="POST">
+   {% csrf_token %}
+   <label for="id_choice">Choice:</label></th><td>
+     <select name="choice" required id="id_choice">
+      <option value="">---------</option>
+      {% for  x in choice %}
+      <option value="{{x.id}}">{{x.choice}}</option>
+      {% endfor %}
+ 
+
+</select>
+<input type="hidden" name="user" value="{{request.user.id}}" />
+<input type="hidden" name="question_id" value="{{question.id}}" required id="id_question_id">
+<input type="submit" />
+</form>

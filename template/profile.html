@@ -1,0 +1,35 @@
+
+
+<h1>{{learner.name}}</h1>
+<p>{{ learner.occupation }}</p>
+
+
+<br>
+<br>
+{% for x in courses %}
+<ul>
+    <li>{{x.course_id}}</li>
+    
+</ul>
+{% endfor %}
+
+
+<br>
+<br>
+<form method="POST">
+    {% csrf_token %}
+
+    <select name="course_id" required id="id_course_id">
+        <option value="" selected>---------</option>
+        {% for x in allCo %}
+        <option value="{{x.id}}">{{x.title}}</option>
+        {% endfor %}      
+      </select>
+      
+        <input type="hidden" name="instructor_id" value="{{learner.id}}"/>
+      
+      </select></td></tr>
+          
+
+    <input type="submit" />
+</form>

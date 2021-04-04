@@ -1,0 +1,14 @@
+
+<div class="container">
+    <div class="breadcrumb">
+        <div class="breadcrumb-item" style="text-align:center">
+            <h1>Log In</h1>
+        </div>
+    </div>
+    <form class="form" style="width:400px" method="POST">
+        {% csrf_token %}
+        <input type="text" name="username" placeholder="Username" class="form-control" id="username"/>
+        <input type="text" name="password" placeholder="Password" id="password" class="form-control"/>
+        <input type="submit"/>
+    </form>
+</div>
